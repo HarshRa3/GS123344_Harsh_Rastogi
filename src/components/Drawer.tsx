@@ -87,10 +87,19 @@ const NavDrawer: React.FC<{ children: React.ReactElement }> = ({
           </List>
         </Box>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 1 }}>
+      <Stack
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 1,
+          background: "#DFDFDF",
+          height: "100vh",
+          overflow: "auto",
+        }}
+      >
         <Toolbar />
         {children}
-      </Box>
+      </Stack>
     </Box>
   );
 };
